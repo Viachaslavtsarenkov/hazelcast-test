@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   selector:
-    app: vusershc
+    app: my-deploy
   ports:
     - name: hazelcast
       port: 5701
