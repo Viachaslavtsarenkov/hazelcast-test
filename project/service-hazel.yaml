@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hazelcast
+  namespace: default
+spec:
+  selector:
+    app: vusershc
+  ports:
+    - name: hazelcast
+      port: 5701
+  type: LoadBalancer
+  
