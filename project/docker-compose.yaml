@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  hazelcast-server-1:
+    build: hazel-cast-project
+    ports:
+      - "8080:8080"
+    container_name: hazelcast-server-1
+  hazelcast-server-2:
+    build: hazel-cast-project
+    ports:
+      - "8081:8080"
+    container_name: hazelcast-server-2
+  hazelcast-server-3:
+    build: hazel-cast-project
+    ports:
+      - "8082:8080"
+    container_name: hazelcast-server-3

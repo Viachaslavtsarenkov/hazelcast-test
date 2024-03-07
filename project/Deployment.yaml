@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy
+  namespace: dev
+  labels:
+    app: my-deploy
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: my-deploy
+  template:
+    metadata:
+      name: my-deploy
+      labels:
+        app: my-deploy
+    spec:
+      containers:
+        - name: server1
+          image: tsarankouviachaslau/hazelcast-project:latest
+          ports:
+            - containerPort: 8080
+        - name: server2
+          image: tsarankouviachaslau/hazelcast-project:latest
+          ports:
+            - containerPort: 8081
+        - name: server3
+          image: tsarankouviachaslau/hazelcast-project:latest
+          ports:
+            - containerPort: 8082
+      
