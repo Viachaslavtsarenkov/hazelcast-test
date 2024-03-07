@@ -17,3 +17,17 @@ spec:
                 name: server1
                 port:
                   number: 8080
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: server2
+                port:
+                  number: 8081
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: server3
+                port:
+                  number: 8082
